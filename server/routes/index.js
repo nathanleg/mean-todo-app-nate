@@ -25,7 +25,6 @@
   });
 
   router.put('/api/todos', function(req, res) {
-
     db.todos.update({
       _id: mongojs.ObjectId(req.body._id)
     }, {
@@ -34,7 +33,6 @@
     }, {}, function(err, data) {
       res.json(data);
     });
-
   });
 
   router.delete('/api/todos/:_id', function(req, res) {
